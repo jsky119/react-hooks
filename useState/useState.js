@@ -1,5 +1,6 @@
+import { StrictMode } from "react";
+import ReactDOM from "react-dom";
 import React, { useState } from "react";
-import "./styles.css";
 
 const App = () => {
   const [item, setItem] = useState(1);
@@ -15,3 +16,11 @@ const App = () => {
 };
 
 export default App;
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+  rootElement
+);
